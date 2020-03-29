@@ -1,0 +1,66 @@
+{% extends 'diary/main_template.html' %}
+{% block title %} Diary {% endblock %}
+{% load static %}
+{% block content %}
+<div class = "header container-fluid">
+    <div class = "container">
+        <div class="image">
+            <img src="{% static "diary/img/logo.png" %}">
+        </div>
+    </div>
+</div>
+<div class="wrapper container-fluid">
+    <div class="row">
+        <div class="sidenav col-2">
+            <ul>
+                <li class="main-li">Outbound Diaries</li>
+                <ul>
+                {% for year in years %}
+                <li class="non-li"><a href="/diary/{{ year }}">{{ year }}</a></li>
+                {% endfor %}
+                </ul>
+                <li class="main-li">Inbound Diaries</li>
+                <li class="main-li">SGRIP</li>
+                <li class="main-li">GIAN</li>
+                <li class="main-li">Dual Doctural Program</li>
+            </ul>
+        </div>
+        <div class="main container">
+            <div class="min-head container">
+                <h1>Exchange Diaries</h1>
+            </div><hr>
+            <div class="desc">
+                By
+                <span class="sp">
+                    International Relationals Cell
+                </span>
+                <img src="{% static "diary/img/irclogo.png" %}"><br>
+                <h2>Outbound Diaries <span class="new">{{ cur_year }}</span></h2>
+            </div>
+            <div class="people row">
+            {% for person in people %}
+            <!-- <img src="{{ person.img.url }}"> -->
+                <div class="person col-4">
+                    <div class="card">
+                        <div class="ig">
+                            <img src="{{ person.img.url }}" class="card-img-top">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ person.name }}</h5>
+                            <p>
+                                <div class="dep"><b>Department:</b> {{ person.dep }}</div>
+                                <div class="univ"><b>University:</b> {{ person.univ }}</div>
+                                <div class="dur"><b>Duration:</b> {{ person.duration }}</div>
+                                <div class="res"><b>Reasearch Area:</b> {{ person.re_area }}</div>
+
+                            </p>
+                            <a href="/diary/more/{{ person.id }}">Read More...</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'diary/main_template.html' %}
+{% block title %} Diary {% endblock %}
+{% load static %}
+{% block content %}
+<div class = "header container-fluid">
+    <div class = "container">
+        <div class="image">
+            <img src="{% static "diary/img/logo.png" %}">
+        </div>
+    </div>
+</div>
+<div class="wrapper container-fluid">
+    <div class="row">
+        <div class="sidenav col-2">
+            <ul>
+                <li class="main-li">Outbound Diaries</li>
+                <ul>
+                {% for year in years %}
+                <li class="non-li"><a href="/diary/{{ year }}">{{ year }}</a></li>
+                {% endfor %}
+                </ul>
+                <li class="main-li">Inbound Diaries</li>
+                <li class="main-li">SGRIP</li>
+                <li class="main-li">GIAN</li>
+                <li class="main-li">Dual Doctural Program</li>
+            </ul>
+        </div>
+        <div class="main container">
+            <div class="min-head container">
+                <h1>{{ person.name }}</h1>
+            </div><hr>
+            <div class="desc">
+                By
+                <span class="sp">
+                    International Relationals Cell
+                </span>
+                <img src="{% static "diary/img/irclogo.png" %}"><br>
+                <h2>Outbound Diaries <span class="new">{{ person.year }}</span></h2>
+            </div>
+            <div class="complete">
+                <img src="{{ person.img.url }}">
+                <p>
+                    <b>University:</b> {{ person.univ }} <br>
+                    <b>Department:</b> {{ person.dep }} <br>
+                    <b>Research Area:</b> {{ person.re_area }} <br>
+                    <b>Duration:</b> {{ person.duration }} <br>
+                </p>
+                <p>
+                    {{ person.description }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

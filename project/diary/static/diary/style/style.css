@@ -1,0 +1,155 @@
+.header{
+    margin-top: 0%;
+    padding-top: 0%;
+    background-color: #313b3d;
+    position: fixed;
+    z-index: 1;
+}
+
+.wrapper{
+    padding-top:6.4%;
+}
+
+.image img{
+    padding: 3%;
+    width: 38%;
+    height: auto;
+    min-width: 100px;
+}
+
+.row{
+    height: 100%;
+}
+
+.sidenav{
+    background-color: #313b3d;
+    height: 100%;
+    padding: 0%;
+    position: fixed;
+}
+
+.sidenav ul{
+    margin-left: 0%;
+    padding-left: 0%;
+}
+
+.sidenav ul li {
+    background-color: #313b3d;
+    transition: background-color 0.5s;
+}
+
+.sidenav ul li:hover{
+    background-color: #505d5f;
+}
+
+.sidenav ul .main-li{
+    padding-left: 2px;
+    font-weight: 150;
+    text-align: center;
+    list-style: none;
+    color: white;
+    font-size: 1.3em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.sidenav ul .non-li{
+    padding-top:5px;
+    padding-bottom: 5px;
+    text-align: center;
+    list-style: none;
+}
+
+.sidenav ul .non-li a{
+    color: #999999;
+    transition: color 0.5s;
+    font-size: 1.1em;
+}
+
+.sidenav ul .non-li a:hover{
+    text-decoration: none;
+}
+
+.sidenav ul .non-li:hover a{
+    color:white;
+}
+
+.main{
+    margin-left: 25%;
+}
+
+hr{
+    margin: 0%;
+}
+
+.min-head{
+    padding:15px;
+    padding-top:25px;
+}
+
+.desc{
+    text-align: center;
+    color:black;
+    font-size: 0.9em;
+    padding: 25px;
+}
+
+.desc .sp{
+    font-weight: bold;
+}
+
+.desc img{
+    width:2%;
+    height: auto;
+}
+
+.desc h2{
+    padding: 10px;
+}
+
+.desc h2 .new{
+    color: #999999;
+}
+
+.univ {
+    font-style: italic;
+}
+
+.card{
+    border-radius: 2px;
+    height: 100%;
+    z-index: 0;
+    border-color: rgba(0, 0, 0, 0.363);
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.295);
+    transition: 0.3s;
+}
+
+.ig{
+    overflow: hidden;
+}
+
+.card-img-top{
+    transition: transform 0.5s;
+}
+
+.card:hover .card-img-top{
+    transform: scale(1.17);
+}
+  
+  /* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 24px 48px 0 rgb(0, 0, 0);
+}
+
+.complete img{
+    width: 30%;
+    height: auto;
+}
+
+.person{
+    height: 30em;
+}
